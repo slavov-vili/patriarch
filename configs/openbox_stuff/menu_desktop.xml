@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+  <menu id="desktop-menu" label="Menu">
+
+    <!-- Shortcuts -->
+    <item label="Terminal" icon="/usr/share/icons/Adwaita/16x16/apps/utilities-terminal.png">
+      <action name="Execute">
+	<command>urxvt</command>
+      </action>
+    </item>
+    <item label="File Manager" icon="/usr/share/icons/Adwaita/32x32/apps/system-file-manager.png">
+      <action name="Execute">
+	<command>qtfm /home/vilskin</command>
+      </action>
+    </item>
+    <item label="Web Browser" icon="/usr/share/icons/Adwaita/32x32/apps/web-browser.png">
+      <action name="Execute">
+	<command>qupzilla</command>
+      </action>
+    </item>
+
+    <separator/>
+
+    <!-- Display Options -->
+    <item label="Refresh" icon="/usr/share/icons/Flattr Dark/actions/24/view-refresh.svg">
+      <action name="Execute">
+        <command>openbox --restart</command>
+      </action>
+    </item>
+    <item label="Change Desktop Background" icon="/usr/share/icons/Flattr Dark/actions/16/view-choose.svg">
+      <action name="Execute">
+	      <command>urxvt -e sh ~/scripts/change_background.sh /usr/share/backgrounds ~/Pictures</command>
+      </action>
+      </item>
+      <item label="Change Screen Resolution" icon="/usr/share/icons/Flattr Dark/actions/24/gtk-fullscreen.svg">
+      <action name="Execute">
+	      <command>urxvt -e sh ~/scripts/change_screen_resolution.sh</command>
+      </action>
+    </item>
+    <item label="Edit OpenBox" icon="/usr/share/icons/Flattr Dark/actions/24/window_new.svg">
+      <action name="Execute">
+	<command>gvim ~/.config/openbox/rc.xml</command>
+      </action>
+    </item>
+    <item label="Edit Taskbar" icon="/usr/share/icons/Flattr Dark/actions/24/go-jump-locationbar.svg">
+      <action name="Execute">
+	 <command>gvim ~/.config/tint2/tint2rc</command>
+      </action>
+    </item>
+    <item label="Edit Desktop Menu" icon="/usr/share/icons/Flattr Dark/actions/24/application-menu.svg">
+      <action name="Execute">
+	<command>gvim ~/.config/openbox/menu_desktop.xml</command>
+      </action>
+    </item>
+    <item label="Edit Start Menu" icon="/usr/share/icons/Flattr Dark/places/16/user-home.svg">
+      <action name="Execute">
+	<command>gvim ~/.config/openbox/rc.xml</command>
+      </action>
+    </item>
+
+    <separator/>
+
+    <!-- Exit Menu -->
+    <menu id="system-menu" label="System" icon="/usr/share/icons/custom/32x32/arch.png">
+      <item label="Log out" icon="/usr/share/icons/Flattr Dark/apps/32/system-log-out.svg">
+        <action name="Execute">
+	  <command>openbox --exit</command>
+        </action>
+      </item>
+      <item label="Lock" icon="/usr/share/icons/Flattr Dark/apps/32/system-lock-screen.svg">
+        <action name="Execute">
+          <command>dm-tool lock</command>
+        </action>
+      </item>
+      <item label="Reboot" icon="/usr/share/icons/Flattr Dark/apps/32/system-reboot.svg">
+        <action name="Execute">
+          <command>systemctl reboot</command>
+        </action>
+      </item>
+      <item label="Power off" icon="/usr/share/icons/Flattr Dark/apps/32/system-shutdown.svg">
+        <action name="Execute">
+          <command>systemctl poweroff</command>
+        </action>
+      </item>
+    </menu>
+  </menu>
+</openbox_menu>

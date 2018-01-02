@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="Menu" execute="/usr/bin/obmenu-generator -c -i"/>
+</openbox_menu>
